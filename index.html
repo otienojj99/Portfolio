@@ -1,27 +1,227 @@
 <!DOCTYPE html>
-<html>
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title> To-doo App</title>
-        <link rel="stylesheet" href="styles.css">
-  </head>
- <body>
-    <div class="container">
-        <div class="todo">
-            <h2>ToDoo-list</h2>
-            <div class="row">
-                <input type="text" id="add-box" placeholder="Add text here">
-                <button onclick="addTask()">Add</button>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>My Portfolio</title>
+        <script src="https://kit.fontawesome.com/fd78719223.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+     <div id="header">
+        <div class="container">
+            <nav>
+               <img src="image/Capture.JPG" class="logo">
+               <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+               </ul> 
+               <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="up-text">
+                <p>Web designer</p>
+                <h1>Hi i'm <span>Jasper</span><br> from Nairobi kenya</h1>
+
             </div>
-            <ul id="list-cont">
-               <!-- <li class="done">task1</li>
-                <li>task2</li>
-                <li>task3</li>-->
-            </ul>
+
+        </div>
+
+     </div>   
+    <!------------about-----------|-->
+
+     <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-gig-1">
+                    <img src="image/pic1.jpg">
+                </div>
+                <div class="about-gig-2">
+                    <h1 class="sub">About me</h1>
+                    <p>
+                        Hello, I'm Jasper, an aspiring software engineer on a journey to turn my passion for coding into real-world solutions.<br> As a newcomer to the world of programming, I thrive on the challenges and the thrill of constant learning.<br> My goal is to build robust and elegant software that makes a difference. From writing clean code to solving complex problems,<br> I'm dedicated to mastering the art of software engineering.
+                         Join me on this exciting quest to <span class="clot">explore, innovate, and create the digital future.</span> 
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-link active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-link"  onclick="opentab('Expirience')">Expirience</p>
+                        <p class="tab-link"  onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="Skills">
+                        <ul>
+                            
+                            <li><span>Web dev</span><br>Designing web/App interface</li>
+                            <li><span>Frontend dev</span><br> web/App Developement</li>
+                            <li><span>App dev</span><br>Building android/IOS</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-content"id="Expirience">
+                        <ul>
+                            
+                            <li><span>2020</span><br>Web dev training at online tutorials(super simple dev)</li>
+                            <li><span>2022</span><br>App dev online tutorials<br> </li>
+                            <li><span>To Date</span><br>Online tutorials</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Education">
+                        <ul>
+                            <li><span>2023</span><br>Proceeding with Diplima in software engineering</li>
+                            <li><span>2022</span><br>A secondry school certificate </li>
+                            <li><span>2022</span><br>certification in web developement throgh blended school</li>
+                        </ul>
+                        
+                    </div>
+                
+            </div>
+        </div>
+
+     </div>  
+ <!------------My services-----------|-->
+     <div id="service">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web design</h2>
+                    <p>
+                        Crafting captivating web experiences that blend aesthetics with functionality, 
+                        ensuring your online presence leaves a lasting impression.
+                    </p>
+                         <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Portfolio web design</h2>
+                    <p>
+                        Transforming your work into an online showcase of your talents, creating a visually
+                         stunning and user-friendly portfolio that sets you apart.
+                    </p>
+                         <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-figma"></i>
+                    <h2>Web dev</h2>
+                    <p>
+                        Bringing your digital ideas to life through custom web solutions,
+                         from e-commerce platforms to interactive web applications, tailored to your unique needs.
+                    </p>
+                         <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+     </div>
+      <!------------Portfolio-----------|-->
+      <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/images7.jpg">
+                    <div class="layer">
+                        <h3>Backend</h3>
+                        <p>Coding the programs of the portfolio</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/images5.jpg">
+
+                     <div class="layer">
+                        <h3>Developing plan</h3>
+                        <p>placing the basics in place</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/images6.jpg">
+                    <div class="layer">
+                        <h3>frontend</h3>
+                        <p>Developing portfolio using programming skills </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-up-right-from-square"></i></a> 
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+      </div>
+      <!------------Contant-----------|-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <hi class="sub-title">Contact me</hi>
+                <p> <i class="fa-sharp fa-solid fa-paper-plane"></i>jasperjabiya6@gmail.com</p>
+                <div class="social-icon">
+                    <a href="https://facebook.com/jaspe jabiya"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/jasperjabiya691/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="whatsapp:contact=+254746021397@s.whatsapp.com&message"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a href="image/ozi.c" download class="btn btn2">Download</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="your name" required>
+                    <input type="email" name="Email" placeholder="your email" required>
+                    <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
         </div>
     </div>
-    <script src="main.js"></script>
- </body>
+</div>
+<div class="copyright">
+    <p>copyright <i class="fa-sharp fa-regular fa-copyright"></i> jasper.made with me</p>
+</div>      
+
+     <script>
+        
+        var tablink = document.getElementsByClassName("tab-link");
+        var tabcontent = document.getElementsByClassName("tab-content");
+        function opentab(tabname){
+            for(tablink of tablink){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontent){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+     </script>
+     <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+     </script>
+     <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyBXyq7eKAD6ajT0BETSa3QSvuO8QSdCPkc8kiUnDjE9HTBqmj5sDMX4rjCpmI8T69T/exec'
+  const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "sent succesfully getting back to you soon"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    </body>
+
 </html>
